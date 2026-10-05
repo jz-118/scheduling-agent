@@ -1,0 +1,22 @@
+[project]
+name = "scheduling-agent"
+version = "1.0.0"
+requires-python = ">=3.12"
+description = "Plan-Execute-Check intelligent scheduling agent"
+dependencies = [
+  "ortools>=9.14,<10",
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.34,<1",
+  "httpx>=0.28,<1",
+]
+
+[project.scripts]
+scheduling-agent = "app.cli:main"
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
